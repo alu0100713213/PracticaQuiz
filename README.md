@@ -1,6 +1,7 @@
-##  Práctica Quiz. Generación, Favicon, Layouts, Controladores, Modelos
+#  Práctica Quiz. Generación, Favicon, Layouts, Controladores, Modelos
+## Subject: Sistemas y Tecnologías Web
 
-## Guión de la práctica
+#### 1. Guión de la práctica
 
 * Siguiendo las instrucciones en el Módulo VI: El proyecto Quiz y MVC construya paso a paso la aplicación del cuestionario.
 * Siga las instrucciones en el repositorio SYTW/basic-quiz para dotarlo de un modelo con múltiples preguntas. Este modelo no usa una base de datos sino que se describe mediante una clase JavaScript.
@@ -11,12 +12,12 @@
 * No hace falta que haga un diseño adaptativo.
 * No hace falta que haga pruebas.
 
-## Instalación y ejecución
+#### 2. Instalación y ejecución
 
 $ npm install 
 $ npm start 
 
-## Autor de la práctica
+#### 3. Links
 
-Juan Ignacio Hita Manso
-
+* Mi página personal. [Link](http://alu0100713213.github.io)
+* Despligue en el IAS (Sólo accesibe desde la red de la ULL). [Link](http://)
