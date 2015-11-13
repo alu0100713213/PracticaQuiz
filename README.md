@@ -14,8 +14,8 @@
 
 #### 2. Instalación y ejecución
 
-$ npm install 
-$ npm start 
+########$ npm install 
+########$ npm start 
 
 #### 3. Links
 
