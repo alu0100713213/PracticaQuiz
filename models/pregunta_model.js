@@ -1,9 +1,9 @@
 var respuesta_req = require('./respuesta_model.js');
 
 function Pregunta(pregunta,respuesta){
-	var resp = new Respuesta(respuesta);
-	this.checkResponse = function(res){
-		console.log("Pregunta > checkResponse > res = " + res);
+	var resp = new Respuesta(pregunta);
+	this.checkResponse = function(respuesta){
+		//console.log("Pregunta: = " + respuesta);
 		return resp.checkResponse(respuesta);
 	}
 	this.getPregunta = function(){
@@ -14,4 +14,7 @@ function Pregunta(pregunta,respuesta){
 	}
 }
 
+function PreguntaCorta(pregunta, respuesta){
+	var resp = new Respuesta(pregunta);
+	
 module.exports = Pregunta;

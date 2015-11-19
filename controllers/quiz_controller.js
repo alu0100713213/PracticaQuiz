@@ -2,7 +2,7 @@ var Quiz = require('../models/quiz_model');
 
 var quiz = new Quiz();
 var current = quiz.randomQuestion();
-/* GET quizes/question page. */
+
 exports.question = function(req,res) {
   current = quiz.randomQuestion();
   res.render('quizes/question', {pregunta: current.pregunta});
