@@ -1,17 +1,30 @@
 function Respuesta(entrada){
-		if(typeof(entrada) == "string")
-			return entrada === 'string';
-		else if(typeof(entrada) == "number")
-			return entrada === 'number'
-		else if(respuesta.constructor.name == "RegExp"){
-			if(entrada.exec(r))
-				return true;
-			else
-				return false;
-		}
-		else if(typeof(entrada) == "function"){
-			return entrada;
-		}
+	if(typeof(entrada) == "string")
+	{
+		return function(x) { 
+			return x === entrada; 
+		};
+	}
+	else if(typeof(entrada) == "number")
+	{
+		return function(x) { 
+			return x === entrada; 
+		};
+	}
+	else if(entrada instanceof RegExp)
+	{
+		return function(x) { 
+			return x.match(entrada); 
+		};	
+	}
+	else if(entrada && entrada.constructor && entrada.call && entrada.apply)
+	{
+		return entrada;
+	}
+	else
+	{
+		return typeof entrada != 'undefined';
+	}
 }
 
 module.exports = Respuesta;
