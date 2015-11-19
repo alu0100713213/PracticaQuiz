@@ -11,6 +11,7 @@ exports.question = function(req,res) {
   res.render('quizes/question', {pregunta: current.pregunta});
 };
 
+/* GET quizes/answer page. */
 exports.answer = function(req, res) {
   var c = 'Incorrecto';
   if (current.respuesta(req.query.respuesta)) { c = 'Correcto'; }

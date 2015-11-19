@@ -13,20 +13,25 @@ function Quiz() {
     {
       pregunta: new PreguntaCorta('¿Dónde se encuentra la Estatua de la Libertad?'),
       respuesta: new Respuesta(function(x) {
-        if (('Nueva York')|('nueva york')) {
+        if (('Nueva York')||('nueva york'))
+        {
           return true;
         }
-        return false;
+        else {
+          return false;
+        }
       }),
     },
 
     {
       pregunta: new PreguntaLarga('En la programación HTML la función de la etiqueta b es:'),
       respuesta: new Respuesta(function(x) {
-        if (('Aplica negrita a un texto')|('negrita')|('Negrita')) {
+        if (('Aplica negrita a un texto')||('negrita')||('Negrita')){
           return true;
         }
-        return false;
+        else {
+          return false;
+        }
       }),
     }
   );
@@ -41,15 +46,11 @@ function Quiz() {
       self.q.push(
         { pregunta: new PreguntaCorta('¿ '+n1+'x'+n2+"= ?"),
           respuesta: new Respuesta(function(x) {
-            // debug("n1 = "+n1);
-            // debug("n2 = "+n2);
             return (x == n1*n2);
         })
       })
     })
   }
-
-  // debug(this.q);
 }
 
 Quiz.prototype = new AbstractQuiz();
