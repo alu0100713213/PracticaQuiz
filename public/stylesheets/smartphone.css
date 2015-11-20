@@ -1,5 +1,6 @@
 body { 
 	background-image: url("../images/fondo_responsive.jpg");
+	background-repeat: no-repeat;
 }
 
 #page-wrap:after{ 
