@@ -10,6 +10,10 @@ function Respuesta(respuesta)
 	{
 		return function(x){ return x.match(respuesta); };
 	}
+	else if(this.respuesta && this.respuesta.constructor && this.respuesta.call && this.respuesta.apply)
+	{
+		return respuesta;
+	}
 	else
 	{
 		return typeof this.respuesta != 'undefined';
