@@ -1,19 +1,16 @@
-var Quiz = require('../models/quiz_model2');
-
-var quiz = new Quiz();
 var current = quiz.randomQuestion();
-/* GET quizes/question page. */
+var Quiz = require('../models/quiz_model');
+var quiz = new Quiz();
+
 exports.question = function(req,res) {
   current = quiz.randomQuestion();
   res.render('quizes/question', {pregunta: current.pregunta});
 };
 
 exports.home = function(req, res){
-  //debug("en index.js: visitando '/'");
   res.render('index', {title: 'Quiz'});
 };
 
-/* GET quizes/answer page. */
 exports.answer = function(req, res) {
   var c = 'Incorrecto';
   if (current.respuesta(req.query.respuesta)) { c = 'Correcto'; }

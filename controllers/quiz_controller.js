@@ -1,19 +1,16 @@
-var Quiz = require('../models/quiz_model');
-
-var quiz = new Quiz();
 var current = quiz.randomQuestion();
-/* GET quizes/question page. */
+var Quiz = require('../models/quiz_model');
+var quiz = new Quiz();
+
 exports.question = function(req,res) {
   current = quiz.randomQuestion();
   res.render('quizes/question', {pregunta: current.pregunta});
 };
 
 exports.home = function(req, res){
-  //debug("en index.js: visitando '/'");
   res.render('index', {title: 'Quiz'});
 };
 
-/* GET quizes/answer page. */
 exports.answer = function(req, res) {
   var c = 'Incorrecto';
   if (current.respuesta(req.query.respuesta)) { c = 'Correcto'; }
@@ -34,7 +31,7 @@ exports.choosedQuestion = function(req, res){
     current = quiz.getQuestion(req.params.id - 1);
     res.render('quizes/question', {pregunta: current.pregunta});
   }catch (e) {
-    res.render('error2', {message: "No existe esa pregunta"});
+    res.render('error2', {message: "No existe esa pregunta en la base de datos"});
   }
 
 };
