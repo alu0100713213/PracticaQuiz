@@ -1,4 +1,3 @@
-
 function Pregunta(args){
 	this.args = args;
 }

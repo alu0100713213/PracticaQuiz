@@ -1,4 +1,3 @@
-/* Monkey patching Math */
 Math.randomInt = function(x) {
   return Math.floor(Math.random()*x);
 }
