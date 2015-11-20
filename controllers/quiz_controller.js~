@@ -1,4 +1,4 @@
-var Quiz = require('../models/quiz_model');
+var Quiz = require('../models/quiz_model2');
 
 var quiz = new Quiz();
 var current = quiz.randomQuestion();

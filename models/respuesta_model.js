@@ -1,30 +1,23 @@
-function Respuesta(entrada){
-	if(typeof(entrada) == "string")
+function Respuesta(respuesta)
+{
+	this.respuesta = respuesta;
+
+	if(typeof(this.respuesta) === 'string' || typeof(this.respuesta) === 'number') 
 	{
-		return function(x) { 
-			return x === entrada; 
-		};
+	return function(x){return x === respuesta;};
 	}
-	else if(typeof(entrada) == "number")
+	else if(this.respuesta instanceof RegExp)
 	{
-		return function(x) { 
-			return x === entrada; 
-		};
+		return function(x){ return x.match(respuesta); };
 	}
-	else if(entrada instanceof RegExp)
+	else if(this.respuesta && this.respuesta.constructor && this.respuesta.call && this.respuesta.apply)
 	{
-		return function(x) { 
-			return x.match(entrada); 
-		};	
-	}
-	else if(entrada && entrada.constructor && entrada.call && entrada.apply)
-	{
-		return entrada;
+		return respuesta;
 	}
 	else
 	{
-		return typeof entrada != 'undefined';
+		return typeof this.respuesta != 'undefined';
 	}
 }
 
-module.exports = Respuesta;
+module.exports = Respuesta;	
