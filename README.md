@@ -34,9 +34,9 @@
                       npm start
 
 ---
-> [*Mi página personal*](http://alu0100713213.github.io "*Mi página personal*")
+> * Mi página personal [Link](http://alu0100713213.github.io)
 ---
-> [*Despligue en el IAS (Sólo accesibe desde la red de la ULL).*](http://10.6.128.99:8081) "*Despligue en el IAS (Sólo accesibe desde la red de la ULL).*")
+> * Despligue en el IAS (Sólo accesibe desde la red de la ULL) [Link](http://10.6.128.99:8081)
 ---
-> [*Despligue en Heroku*](https://quiz-app1.herokuapp.com/) "*Despligue en Heroku*")
+> * Despligue en Heroku [Link](https://quiz-app1.herokuapp.com/)
 
