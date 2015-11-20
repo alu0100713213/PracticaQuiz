@@ -8,7 +8,7 @@
 	<body>
 		<form method="get" action="/quizes/answer">
 		<h2>Pregunta: </h2><%= pregunta.args  %><p>
-		<input type="text" name="respuesta" value="Responda aquí"/>
+	  <%- pregunta.view %>
 		<input type="submit" value="Enviar">
 		</form>
 	</body>
